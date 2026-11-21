@@ -1,0 +1,127 @@
+{
+    "key": "group_hb2103_facility",
+    "title": "周辺施設情報",
+    "fields": [
+        {
+            "key": "field_hb2103_fa_address",
+            "label": "所在地",
+            "name": "address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hb2103_fa_map",
+            "label": "位置",
+            "name": "map",
+            "aria-label": "",
+            "type": "google_map",
+            "instructions": "物件からの距離計算に使う。現行データの61.8%に座標が入っている。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": ""
+        },
+        {
+            "key": "field_hb2103_fa_image",
+            "label": "メイン画像",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "hb2103-card",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
+        },
+        {
+            "key": "field_hb2103_fa_gallery",
+            "label": "ギャラリー",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "preview_size": "hb2103-card",
+            "return_format": "array",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 0,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "facility"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "施設そのものの情報。物件との距離は分譲地側で入力する。",
+    "show_in_rest": true,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793722562
+}

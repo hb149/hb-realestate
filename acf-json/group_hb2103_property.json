@@ -1,0 +1,1420 @@
+{
+    "key": "group_hb2103_property",
+    "title": "分譲地情報",
+    "fields": [
+        {
+            "key": "field_hb2103_p_tab_basic",
+            "label": "基本",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hb2103_p_subtitle",
+            "label": "キャッチコピー",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "一覧カードや見出しの下に出る短い一文",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hb2103_p_summary",
+            "label": "説明文",
+            "name": "summary",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "この分譲地の紹介文。見出し・画像も入れられる。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "media_upload": 1,
+            "toolbar": "basic",
+            "rows": 8,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_hb2103_p_tab_place",
+            "label": "所在地・周辺環境",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hb2103_p_map",
+            "label": "Googleマップ",
+            "name": "map",
+            "aria-label": "",
+            "type": "google_map",
+            "instructions": "まずここで位置を決めてください。住所で検索するか、ピンをドラッグします。所在地・カーナビ入力用・周辺施設の距離は、ここを起点に目安が出ます。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "33.6064",
+            "center_lng": "130.4181",
+            "zoom": 10,
+            "height": ""
+        },
+        {
+            "key": "field_hb2103_p_address",
+            "label": "所在地",
+            "name": "address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hb2103_p_carnavi",
+            "label": "カーナビ入力用",
+            "name": "carnavi",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hb2103_p_access",
+            "label": "交通",
+            "name": "access",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "1行に1経路。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_hb2103_p_nearby",
+            "label": "周辺施設",
+            "name": "nearby",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "施設は「周辺施設」に登録したものから選びます。薄い文字は目安です。そのままでは保存されないので、採用する場合は入力してください。<br>・<strong>距離<\/strong>は規約により<strong>道路距離<\/strong>が必要です。目安は座標から出した直線距離なので、実際より短く出ます。<br>・<strong>徒歩<\/strong>は距離から計算します（80mにつき1分・切り上げ）。<br>・<strong>車<\/strong>は規約に計算式が無く実測が前提です。目安は時速30kmを仮定した値です。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "施設を追加",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_nearby_facility",
+                    "label": "施設",
+                    "name": "facility",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "28",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "facility"
+                    ],
+                    "return_format": "id",
+                    "ui": 1,
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "save_custom": 0,
+                    "save_post_type": "",
+                    "save_post_status": "",
+                    "parent_repeater": "field_hb2103_p_nearby"
+                },
+                {
+                    "key": "field_hb2103_p_nearby_dist",
+                    "label": "距離",
+                    "name": "distance_m",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "18",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "m",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_hb2103_p_nearby"
+                },
+                {
+                    "key": "field_hb2103_p_nearby_walk",
+                    "label": "徒歩",
+                    "name": "walk_min",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "18",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "分",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_hb2103_p_nearby"
+                },
+                {
+                    "key": "field_hb2103_p_nearby_car",
+                    "label": "車",
+                    "name": "car_min",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "18",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "分",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_hb2103_p_nearby"
+                }
+            ]
+        },
+        {
+            "key": "field_hb2103_p_tab_overview",
+            "label": "物件概要",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hb2103_p_g_overview",
+            "label": "物件概要",
+            "name": "overview",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_total_lots",
+                    "label": "総区画数",
+                    "name": "total_lots",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "区画",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_dev_area",
+                    "label": "開発総面積",
+                    "name": "dev_total_area",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "例: 3,250.00㎡",
+                    "default_value": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_land_use",
+                    "label": "用途地域",
+                    "name": "land_use",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "第一種中高層住居専用地域",
+                    "default_value": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_land_category",
+                    "label": "地目",
+                    "name": "land_category",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "宅地",
+                    "default_value": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_city_plan",
+                    "label": "都市計画",
+                    "name": "city_plan",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_zoning",
+                    "label": "区域区分",
+                    "name": "zoning_division",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_building_ratio",
+                    "label": "建ぺい率",
+                    "name": "building_ratio",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "%",
+                    "min": 0,
+                    "max": 100,
+                    "default_value": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_floor_ratio",
+                    "label": "容積率",
+                    "name": "floor_ratio",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "%",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_setback",
+                    "label": "壁面後退",
+                    "name": "wall_setback",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_road_width",
+                    "label": "道路幅員",
+                    "name": "road_width",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_private_road",
+                    "label": "私道負担",
+                    "name": "private_road",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_electric",
+                    "label": "電気",
+                    "name": "electric",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_water",
+                    "label": "水道",
+                    "name": "water",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_gas",
+                    "label": "ガス",
+                    "name": "gas",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_drainage",
+                    "label": "排水",
+                    "name": "drainage",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_dev_permit",
+                    "label": "開発許可番号",
+                    "name": "dev_permit_no",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_work_done",
+                    "label": "工事完了",
+                    "name": "work_completion",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_seller",
+                    "label": "販売",
+                    "name": "seller",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_vendor",
+                    "label": "売主",
+                    "name": "vendor",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_developer",
+                    "label": "事業主",
+                    "name": "developer",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_overview_extra",
+                    "label": "その他の項目",
+                    "name": "extra",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "決まった項目に無いものだけ入れてください。",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "button_label": "項目を追加",
+                    "min": 0,
+                    "max": 0,
+                    "rows_per_page": 20,
+                    "collapsed": "",
+                    "acfe_repeater_stylised_button": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_hb2103_p_extra_label",
+                            "label": "項目名",
+                            "name": "label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_hb2103_p_overview_extra"
+                        },
+                        {
+                            "key": "field_hb2103_p_extra_value",
+                            "label": "内容",
+                            "name": "value",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "70",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_hb2103_p_overview_extra"
+                        }
+                    ]
+                }
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_hb2103_p_equipment",
+            "label": "設備・仕様",
+            "name": "equipment",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "この分譲地の標準仕様です。区画ごとに違う場合は、その区画の「詳細」で上書きできます。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "equipment"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_hb2103_p_tab_sales",
+            "label": "販売概要",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hb2103_p_g_land",
+            "label": "建築条件付宅地概要",
+            "name": "sale_land",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "宅地として販売する場合の概要表。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_land_enabled",
+                    "label": "この概要を表示する",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "ui": 1,
+                    "default_value": 0,
+                    "ui_on_text": "表示",
+                    "ui_off_text": "非表示",
+                    "message": ""
+                },
+                {
+                    "key": "field_hb2103_p_land_lots",
+                    "label": "販売区画数",
+                    "name": "lots_for_sale",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_land_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "区画",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_land_note",
+                    "label": "建築条件付宅地について",
+                    "name": "note",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_land_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "acfe_textarea_code": 0
+                }
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_hb2103_p_g_house",
+            "label": "建物分譲概要",
+            "name": "sale_house",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "建売住宅として販売する場合の概要表。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_house_enabled",
+                    "label": "この概要を表示する",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "ui": 1,
+                    "default_value": 0,
+                    "ui_on_text": "表示",
+                    "ui_off_text": "非表示",
+                    "message": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_units",
+                    "label": "販売戸数",
+                    "name": "units_for_sale",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "戸",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_phase",
+                    "label": "今回販売戸数",
+                    "name": "units_this_phase",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "戸",
+                    "min": 0,
+                    "default_value": "",
+                    "max": "",
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_structure",
+                    "label": "構造・規模",
+                    "name": "structure",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_cert",
+                    "label": "建築確認番号",
+                    "name": "building_cert",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_area",
+                    "label": "建物面積",
+                    "name": "building_area",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_completion",
+                    "label": "完成",
+                    "name": "completion",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_house_movein",
+                    "label": "入居",
+                    "name": "move_in",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_hb2103_p_house_enabled",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_hb2103_p_g_range",
+            "label": "価格・面積の表示",
+            "name": "range_override",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "通常は入力不要です。価格・面積の範囲（例「1,066万円 〜 1,129万円」）は区画の数値から自動で計算して表示します。自動計算と違う表示にしたいときだけ入力してください。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_price_override",
+                    "label": "価格表示の上書き",
+                    "name": "price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_hb2103_p_area_override",
+                    "label": "土地面積表示の上書き",
+                    "name": "area",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_hb2103_p_tab_media",
+            "label": "写真・図面",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_hb2103_p_img_plat",
+            "label": "区画図",
+            "name": "plat",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "SVGで入れると各区画をクリックできる図にできます（ページには直接展開されます）。通常の画像でも構いません。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "hb2103-plan",
+            "mime_types": "svg,png,jpg,jpeg,webp",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0
+        },
+        {
+            "key": "field_hb2103_p_img_map",
+            "label": "マップ画像",
+            "name": "map_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "hb2103-card",
+            "mime_types": "svg,png,jpg,jpeg,webp",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0
+        },
+        {
+            "key": "field_hb2103_p_videos",
+            "label": "動画",
+            "name": "videos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "動画を追加",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_p_video_url",
+                    "label": "URL",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_hb2103_p_videos"
+                },
+                {
+                    "key": "field_hb2103_p_video_thumb",
+                    "label": "サムネイル",
+                    "name": "thumbnail",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "parent_repeater": "field_hb2103_p_videos"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "property"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "分譲地の情報。価格・面積の範囲は号地から自動計算する。",
+    "show_in_rest": true,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793722562
+}

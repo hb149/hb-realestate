@@ -1,0 +1,102 @@
+{
+    "key": "group_hb2103_equipment",
+    "title": "設備・仕様",
+    "fields": [
+        {
+            "key": "field_hb2103_eq_summary",
+            "label": "説明文",
+            "name": "summary",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "一覧や物件ページに出す短い説明。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_hb2103_eq_maker",
+            "label": "メーカー・品番",
+            "name": "maker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "例: TOTO \/ Takara standard。無ければ空のままで構いません。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hb2103_eq_gallery",
+            "label": "画像",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "1枚目が代表画像になります。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "preview_size": "medium",
+            "return_format": "array",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 0,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "equipment"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "設備・仕様マスタ。分譲地・区画から参照される。",
+    "show_in_rest": true,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793722562
+}

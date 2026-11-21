@@ -1,0 +1,71 @@
+{
+    "key": "group_hb2103_settings",
+    "title": "サイト共通設定",
+    "fields": [
+        {
+            "key": "field_hb2103_sec_ext",
+            "label": "外部サービス",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_hb2103_s_gmaps_key",
+            "label": "Google Maps APIキー",
+            "name": "google_maps_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Google Cloud で「Maps JavaScript API」と「Geocoding API」を有効にしたキーを入れます。\nこのキーはブラウザに出るため、秘匿ではなく Google Cloud 側の「HTTPリファラーの制限」で守ります。\n本番・テストそれぞれのドメインをリファラーに登録してください。",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "AIza…",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "hb2103-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "サイト全体で使う設定。",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793722562
+}

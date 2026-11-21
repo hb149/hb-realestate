@@ -1,0 +1,1014 @@
+{
+    "key": "group_hb2103_lots",
+    "title": "区画",
+    "fields": [
+        {
+            "key": "field_hb2103_p_lots",
+            "label": "区画",
+            "name": "lots",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "区画を追加",
+            "min": 1,
+            "collapsed": "",
+            "max": 0,
+            "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_hb2103_lotr_no",
+                    "label": "号地番号",
+                    "name": "lot_no",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "1 \/ A-2",
+                    "default_value": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_hb2103_p_lots"
+                },
+                {
+                    "key": "field_hb2103_lotr_type",
+                    "label": "販売タイプ",
+                    "name": "lot_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "kenbai": "建売住宅",
+                        "joken": "建築条件付宅地",
+                        "setplan": "セットプラン"
+                    },
+                    "default_value": "kenbai",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "parent_repeater": "field_hb2103_p_lots"
+                },
+                {
+                    "key": "field_hb2103_lotr_status",
+                    "label": "販売状況",
+                    "name": "status",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "on_sale": "販売中",
+                        "applied": "申込中",
+                        "contracted": "契約済"
+                    },
+                    "default_value": "on_sale",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "parent_repeater": "field_hb2103_p_lots"
+                },
+                {
+                    "key": "field_hb2103_lotr_g_detail",
+                    "label": "詳細",
+                    "name": "detail",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "acfe_group_modal": 1,
+                    "acfe_group_modal_button": "詳細を編集",
+                    "acfe_group_modal_size": "large",
+                    "acfe_group_modal_close": 1,
+                    "sub_fields": [
+                        {
+                            "key": "field_hb2103_lotr_layout",
+                            "label": "間取り",
+                            "name": "layout",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "2LDK": "2LDK",
+                                "3LDK": "3LDK",
+                                "4LDK": "4LDK",
+                                "5LDK": "5LDK"
+                            },
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "default_value": false,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "return_format": "value",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_hb2103_lotr_flags",
+                            "label": "販売情報",
+                            "name": "flags",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "planned": "販売予定",
+                                "completed": "完成済み",
+                                "movein_now": "即入居可",
+                                "viewable": "見学可能",
+                                "price_down": "プライスダウン"
+                            },
+                            "layout": "horizontal",
+                            "default_value": [],
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "toggle": 0,
+                            "return_format": "value",
+                            "custom_choice_button_text": "新規選択肢を追加"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_address",
+                            "label": "所在地",
+                            "name": "address",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_hb2103_lotr_equipment",
+                            "label": "設備・仕様",
+                            "name": "equipment",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "空欄なら分譲地の設備・仕様をそのまま使います。この区画だけ違う場合に、その区画の内容を選んでください（選んだものだけになります）。",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "equipment"
+                            ],
+                            "return_format": "id",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "taxonomy": [],
+                            "min": 0,
+                            "max": 0,
+                            "elements": [],
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_hb2103_lotr_g_area",
+                            "label": "面積",
+                            "name": "area",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "㎡・坪のどちらから入力しても構いません。もう一方は自動で換算されます。",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_land_area",
+                                    "label": "土地面積（㎡）",
+                                    "name": "land_sqm",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "hb2103-area hb2103-area--sqm",
+                                        "id": ""
+                                    },
+                                    "append": "㎡",
+                                    "step": "0.01",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_land_tsubo",
+                                    "label": "土地面積（坪）",
+                                    "name": "land_tsubo",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "hb2103-area hb2103-area--tsubo",
+                                        "id": ""
+                                    },
+                                    "append": "坪",
+                                    "step": "0.01",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_building_area",
+                                    "label": "建物面積（㎡）",
+                                    "name": "building_sqm",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "hb2103-area hb2103-area--sqm",
+                                        "id": ""
+                                    },
+                                    "append": "㎡",
+                                    "step": "0.01",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_building_tsubo",
+                                    "label": "建物面積（坪）",
+                                    "name": "building_tsubo",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "hb2103-area hb2103-area--tsubo",
+                                        "id": ""
+                                    },
+                                    "append": "坪",
+                                    "step": "0.01",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                }
+                            ],
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_g_price",
+                            "label": "価格",
+                            "name": "price",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "円単位で入力（例: 32,800,000）。公示日は不動産公正競争規約で表示が必要。",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_price",
+                                    "label": "販売価格",
+                                    "name": "sale",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "append": "円",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "step": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_price_date",
+                                    "label": "価格公示日",
+                                    "name": "sale_date",
+                                    "aria-label": "",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y年n月j日",
+                                    "return_format": "Y-m-d",
+                                    "first_day": 1,
+                                    "default_to_current_date": 0
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_price_rev",
+                                    "label": "新価格",
+                                    "name": "revised",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "append": "円",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "step": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_price_rev_date",
+                                    "label": "新価格公示日",
+                                    "name": "revised_date",
+                                    "aria-label": "",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y年n月j日",
+                                    "return_format": "Y-m-d",
+                                    "first_day": 1,
+                                    "default_to_current_date": 0
+                                }
+                            ],
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_g_land_price",
+                            "label": "土地価格",
+                            "name": "land_price",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "建築条件付宅地・セットプランのとき使う。",
+                            "required": false,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_hb2103_lotr_type",
+                                        "operator": "!=",
+                                        "value": "kenbai"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_price_land",
+                                    "label": "土地価格",
+                                    "name": "amount",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "append": "円",
+                                    "min": 0,
+                                    "default_value": "",
+                                    "max": "",
+                                    "step": "",
+                                    "placeholder": "",
+                                    "prepend": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_price_land_date",
+                                    "label": "土地価格公示日",
+                                    "name": "date",
+                                    "aria-label": "",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "Y年n月j日",
+                                    "return_format": "Y-m-d",
+                                    "first_day": 1,
+                                    "default_to_current_date": 0
+                                }
+                            ],
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_g_building",
+                            "label": "建物",
+                            "name": "building",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_spec",
+                                    "label": "仕様",
+                                    "name": "spec",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_cert",
+                                    "label": "建築確認番号",
+                                    "name": "cert",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_completion",
+                                    "label": "完成予定",
+                                    "name": "completion",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "2027年3月下旬",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_movein",
+                                    "label": "入居予定",
+                                    "name": "move_in",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "相談",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": ""
+                                }
+                            ],
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_tab_exterior",
+                            "label": "外観",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_hb2103_lotr_img_exterior",
+                            "label": "外観",
+                            "name": "images_exterior",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "preview_size": "thumbnail",
+                            "return_format": "array",
+                            "insert": "append",
+                            "library": "all",
+                            "min": 0,
+                            "max": 0,
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_hb2103_lotr_tab_plan",
+                            "label": "間取り図",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_hb2103_lotr_g_plan",
+                            "label": "間取り図",
+                            "name": "plan",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "1枚ずつ登録します。まとめて1枚でも、1F・2Fに分けてでも構いません。",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_plan_all",
+                                    "label": "まとめて",
+                                    "name": "all",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "mime_types": "svg,png,jpg,jpeg,webp",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_plan_1f",
+                                    "label": "1F",
+                                    "name": "floor_1",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "mime_types": "svg,png,jpg,jpeg,webp",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_plan_2f",
+                                    "label": "2F",
+                                    "name": "floor_2",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "mime_types": "svg,png,jpg,jpeg,webp",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0
+                                }
+                            ],
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_hb2103_lotr_tab_slider",
+                            "label": "スライダー",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_hb2103_lotr_img_slider",
+                            "label": "スライダー",
+                            "name": "images_slider",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "preview_size": "thumbnail",
+                            "return_format": "array",
+                            "insert": "append",
+                            "library": "all",
+                            "min": 0,
+                            "max": 0,
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_hb2103_lotr_tab_other",
+                            "label": "その他",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_hb2103_lotr_img_gallery",
+                            "label": "その他",
+                            "name": "images_gallery",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "preview_size": "thumbnail",
+                            "return_format": "array",
+                            "insert": "append",
+                            "library": "all",
+                            "min": 0,
+                            "max": 0,
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_hb2103_lotr_tab_movie",
+                            "label": "動画",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_hb2103_lotr_videos",
+                            "label": "動画",
+                            "name": "videos",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "YouTubeのURLを入れます。サムネイルは未指定ならYouTubeのものを使います。",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "動画を追加",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_hb2103_lotr_video_url",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/youtu.be\/xxxxxxxxxxx",
+                                    "default_value": "",
+                                    "parent_repeater": "field_hb2103_lotr_videos"
+                                },
+                                {
+                                    "key": "field_hb2103_lotr_video_thumb",
+                                    "label": "サムネイル",
+                                    "name": "thumbnail",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "parent_repeater": "field_hb2103_lotr_videos"
+                                }
+                            ]
+                        }
+                    ],
+                    "acfe_seamless_style": 0,
+                    "parent_repeater": "field_hb2103_p_lots"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "property"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "号地の一覧。行はドラッグで並べ替えられる。",
+    "show_in_rest": true,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793722562
+}

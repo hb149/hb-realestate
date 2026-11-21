@@ -1,0 +1,132 @@
+/*
+ * 管理画面のCSS
+ *
+ * 見た目の調整はACFの設定項目で行うのが原則で、CSSは書かない方針。
+ * このファイルには「ACFの設定では実現できないもの」だけを、
+ * なぜ必要かを添えて置く。クラス名はACFが付けるものに依存しているので、
+ * ACF側の構造が変わったときはここを見直す。
+ */
+
+/* ── 目安のコピーボタンを入力欄の中（右端）に ───────────
+ * 入力欄の外に置くとACFの .acf-input-wrap がブロック要素のため必ず改行される。
+ * 欄の内側に重ねることで1行に収め、入力欄の幅も削らない。 */
+.acf-field .acf-input-wrap,
+.acf-field .acf-input {
+  position: relative;
+}
+
+.acf-field .hb2103-copy {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  /* 入力の邪魔にならないよう普段は薄く、触れたときだけ濃くする */
+  color: #c3c4c7;
+  z-index: 1;
+}
+.acf-field .hb2103-copy:hover { color: #50575e; }
+.acf-field .hb2103-copy.is-done { color: #00a32a; }
+.acf-field .hb2103-copy:focus-visible { outline: 1px solid #2271b1; outline-offset: 1px; }
+
+/* アイコンに文字が重ならないよう入力欄の右を空ける。
+ * ACF Extended が body.acfe-wp-7-0 ... .acf-field input[type] に
+ * padding の一括指定を当てており、詳細度で張り合うと選択子が長くなるだけなので
+ * ここは !important で明示する（この1宣言だけ）。 */
+.acf-field .acf-input-wrap:has(> .hb2103-copy) > input,
+.acf-field .acf-input:has(> .hb2103-copy) > input {
+  padding-right: 32px !important;
+}
+
+/* 単位バッジ（m・坪・円など）があるときは、その内側に収める */
+.acf-field .acf-input-append + .acf-input-wrap > .hb2103-copy {
+  right: 6px;
+}
+
+/* ── 地図の吹き出し（施設の追加） ───────────────────────
+ * GoogleのInfoWindowは中身を .gm-style-iw-d (overflow:scroll) で包むため、
+ * 端にある要素のフォーカスリング（box-shadow）が切れて欠けて見える。
+ * 内側に余白を持たせてリングのぶんの逃げを作る。 */
+.hb2103-poi {
+  /* 住所が1行で伸びると吹き出しが横長になるので上限を決めて折り返させる */
+  width: 280px;
+  max-width: 100%;
+  padding: 3px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hb2103-poi__name {
+  width: 100%;
+  min-height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hb2103-poi__addr {
+  margin: 6px 0 0;
+  color: #646970;
+  font-size: 12px;
+}
+
+.hb2103-poi__foot {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* 吹き出しの中では管理画面の既定サイズが大きすぎるので、入力欄に高さを合わせる */
+.hb2103-poi__type {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: none;
+  min-height: 30px;
+  font-size: 13px;
+}
+
+.hb2103-poi__add.button {
+  flex: 0 0 auto;
+  min-height: 30px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 13px;
+}
+
+.hb2103-poi__note {
+  margin: 6px 0 0;
+  min-height: 1em;
+  color: #00a32a;
+  font-size: 12px;
+}
+
+/* ── 周辺環境の「カテゴリ」列 ───────────────────────
+ * 施設側をその場で書き換えるので、保存できたことが分かるよう一瞬だけ色を付ける。 */
+/* 列幅は admin-assist.php が実幅から px で割り付ける。
+ * ACFが th に出すインラインの % は、この表では解決されず全列が等幅に落ちるため。
+ * 固定レイアウトにして、割り付けた幅どおりに描画させる。 */
+.acf-field[data-key="field_hb2103_p_nearby"] .acf-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.hb2103-td-type {
+  vertical-align: middle;
+  padding: 15px 12px;
+}
+.hb2103-fac-type {
+  width: 100%;
+  max-width: none;
+}
+.hb2103-fac-type.is-saved {
+  border-color: #00a32a;
+  color: #00a32a;
+}

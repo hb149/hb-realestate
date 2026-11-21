@@ -1,0 +1,40 @@
+# タグを打つと、WordPressがそのまま展開できる形のzipを作ってReleaseに添付する。
+#
+#   git tag v1.0.1 && git push origin v1.0.1
+#
+# GitHubが自動生成するソースzipは中のフォルダ名が「hb-realestate-1.0.1」になり、
+# そのまま入れるとプラグインが別物として増える。だから自前で hb-realestate/ に詰め直す。
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: バージョンの食い違いを検出する
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          HEADER=$(grep -m1 '^ \* Version:' hb-realestate.php | sed 's/.*Version: *//' | tr -d ' \r')
+          if [ "$TAG" != "$HEADER" ]; then
+            echo "タグ($TAG)とプラグインヘッダ($HEADER)が一致しません。" >&2
+            exit 1
+          fi
+
+      - name: zipを作る
+        run: |
+          mkdir -p build/hb-realestate
+          rsync -a --exclude='.git' --exclude='.github' --exclude='build' ./ build/hb-realestate/
+          cd build && zip -rq hb-realestate.zip hb-realestate
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: build/hb-realestate.zip
+          generate_release_notes: true
