@@ -56,7 +56,7 @@ add_action('admin_enqueue_scripts', function (string $hook): void {
 
     wp_enqueue_style(
         'hb2103-admin',
-        content_url('mu-plugins/dai1-core/assets/admin.css'),
+        plugins_url('assets/admin.css', HB2103_RE_FILE),
         $deps,
         (string) filemtime($path)
     );
